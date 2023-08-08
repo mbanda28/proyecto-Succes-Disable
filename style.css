@@ -1,0 +1,194 @@
+:root {
+    --Tomato: hsl(4, 100%, 67%);
+    --Tomato-sec: hsl(5, 84%, 88%);
+
+    font-family: 'Roboto', sans-serif;
+
+    font-size: 16px;
+
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+}
+body{
+    margin: 0;
+    background-color: var(--Charcoal-Grey);
+    color: var(--Dark-Slate-Grey);
+}
+.container {
+    width: 950px;
+    margin: 0 auto;
+}
+.left-desktop{
+    width: 950px;
+    height: 600px;
+    margin: 40px auto;
+    display: flex;
+    padding: 20px;
+    background-color: var(--White);
+    justify-content: space-around;
+    gap: 10px;
+    border-radius: 40px;
+}
+.info{
+    padding: 0 20px 0 0;
+    margin: 20px 20px 20px 50px;
+    font-size: 18px;
+}
+.info h1{
+    font-size: 60px;
+    margin: 60px 0 30px 0;
+}
+.p1{
+    margin: 40px 0 30px 0;
+}
+.p-email{
+    margin: 40px 0 4px 8px;
+    font-size: 12px;
+    display: inline;
+}
+.p-email-error{
+    display: inline;
+    font-size: 12px;
+    margin: 0 0 0 190px;
+    color: var(--Tomato);
+}
+.formulario{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    gap: 14px;
+}
+.inp, .btn{
+    border-radius: 10px;
+}
+.inp {
+    margin-top: 4px;
+    height: 40px;
+    padding-left: 20px;
+    border: 1px solid var(--Grey);
+}
+.btn {
+    background-color: var(--Dark-Slate-Grey);
+    color: var(--White);
+    height: 46px;
+}
+.btn:hover {
+    cursor: pointer;
+}
+.btn:active {
+    background-color: var(--Tomato);
+}
+ul {
+    list-style: none; /* Oculta los puntos de lista predeterminados */
+    padding-left: 0; /* Elimina el espacio en blanco izquierdo predeterminado */
+}
+li {
+    position: relative; /* Permite posicionar el pseudo-elemento relativo a este elemento */
+    padding-left: 20px; /* Añade espacio para el icono */
+    margin-bottom: 10px; /* Espacio entre elementos de la lista */
+    margin-top: 16px;
+}
+li::before{
+    content: ""; /* Añade el contenido del pseudo-elemento */
+    position: absolute; /* Lo posiciona encima del contenido del elemento */
+    left: 0; /* Alinea con el borde izquierdo del elemento li */
+    top: 0; /* Alinea con la parte superior del elemento li */
+    width: 16px; /* Ancho del icono */
+    height: 16px; /* Alto del icono */
+    background-image: url(./assets/images/icon-list.svg);
+    background-size: cover;
+}
+.logo-movil {
+    display: none;
+}
+
+.inactive {
+    border:1px solid var(--Tomato);
+    background-color: var(--Tomato-sec);
+}
+.disable {
+    display: none;
+}
+
+/* Message */
+
+.message{
+    padding: 40px;
+    background-color: var(--White);
+    margin: 40px auto;
+    width: 320px;
+    height: 300px;
+    border-radius: 40px;
+}
+.img-message {
+    width: 40px;
+}
+.message h1 {
+    font-size: 36px;
+    margin: 10px 0 0 0;
+}
+.message p{
+    margin: 20px 0 0 0;
+    font-size: 14px;
+}
+.message button {
+    width: 300px;
+    padding: 16px 0;
+    background-color: var(--Dark-Slate-Grey);
+    color: var(--White);
+    border-radius: 10px;
+    margin: 34px 5px;
+}
+.message button:hover {
+    cursor: pointer;
+}
+.message button:active {
+    background-color: var(--Tomato);
+    border: none;
+}
+
+@media (max-width: 425px) {
+    .container{
+        width: 470px;
+    }
+    .left-desktop {
+        margin: -60px auto;
+        width: 425px;
+        height: 850px;
+    }
+    .left-desktop h1 {
+        margin-top: 350px;
+    }
+    .logo-d {
+        display: none;
+    }
+    ul {
+        margin-bottom: 50px;
+    }
+    .logo-movil {
+        display: inline;
+        position: absolute;
+        width: 470px;
+    }
+    .message {
+        margin: 0 auto;
+        width: 425px;
+        height: 650px;
+    }
+    .message img {
+        width: 100px;
+        margin-top: 60px;
+    }
+    .message h1 {
+        font-size: 50px;
+    }
+    .message p {
+        font-size: 18px;
+    }
+    .message button {
+        margin: 230px 0 0 60px;
+
+    }
+}
